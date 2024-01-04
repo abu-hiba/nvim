@@ -1,3 +1,3 @@
 # nvim
 
-Neovim config
+My [Neovim](https://neovim.io/) config
