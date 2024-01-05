@@ -17,7 +17,7 @@ vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.cmd("colorscheme tokyonight-night")
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
 
 vim.opt.colorcolumn = "120"
