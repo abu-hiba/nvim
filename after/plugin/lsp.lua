@@ -23,12 +23,26 @@ end)
 
 require("mason").setup({})
 require("mason-lspconfig").setup({
-    ensure_installed = { "tsserver", "lua_ls", "clangd" },
+    ensure_installed = { "tsserver", "lua_ls", "clangd", "html" },
     handlers = {
         lsp_zero.default_setup,
+
         lua_ls = function()
             local lua_opts = lsp_zero.nvim_lua_ls()
-            require("lspconfig").lua_ls.setup(lua_opts)
+            require "lspconfig".lua_ls.setup(lua_opts)
+        end,
+
+        clangd = function()
+            require "lspconfig".clangd.setup {}
+        end,
+
+        html = function()
+            local capabilities = vim.lsp.protocol.make_client_capabilities()
+            capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+            require "lspconfig".html.setup {
+                capabilities = capabilities,
+            }
         end,
     }
 })
