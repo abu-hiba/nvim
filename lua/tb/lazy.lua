@@ -50,4 +50,5 @@ require("lazy").setup({
     "tpope/vim-fugitive",
     "lewis6991/gitsigns.nvim",
     "karb94/neoscroll.nvim",
+    "github/copilot.vim",
 })
