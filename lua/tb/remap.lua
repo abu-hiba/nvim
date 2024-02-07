@@ -24,6 +24,13 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Keeps yanked text when pasting over another word
 vim.keymap.set("x", "<leader>p", "\"_dp")
 
+-- Yank to system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+-- Resize windows
+vim.keymap.set("n", "<C-w>=", ":resize +5<CR>")
+vim.keymap.set("n", "<C-w>-", ":resize -5<CR>")
+vim.keymap.set("n", "<C-w>>", ":vertical resize +5<CR>")
+vim.keymap.set("n", "<C-w><", ":vertical resize -5<CR>")
