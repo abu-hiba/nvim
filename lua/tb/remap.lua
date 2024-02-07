@@ -30,7 +30,7 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- Resize windows
-vim.keymap.set("n", "<C-w>=", ":resize +5<CR>")
-vim.keymap.set("n", "<C-w>-", ":resize -5<CR>")
-vim.keymap.set("n", "<C-w>>", ":vertical resize +5<CR>")
-vim.keymap.set("n", "<C-w><", ":vertical resize -5<CR>")
+vim.keymap.set("n", "<C-k>", ":resize +5<CR>")
+vim.keymap.set("n", "<C-j>", ":resize -5<CR>")
+vim.keymap.set("n", "<C-l>", ":vertical resize +5<CR>")
+vim.keymap.set("n", "<C-h>", ":vertical resize -5<CR>")
