@@ -13,5 +13,5 @@ local function git_push_set_upstream()
 end
 
 vim.keymap.set("n", "<leader>gs", ":Git<CR><C-w>T")
-vim.keymap.set("n", "<leader>gp", ":Git push<CR><C-w>k")
+vim.keymap.set("n", "<leader>gp", ":Git push<CR>")
 vim.api.nvim_create_user_command('Gpsup', git_push_set_upstream, {})
