@@ -1,5 +1,5 @@
 vim.keymap.set("n", "<leader>gs", ":Git<CR><C-w>T")
-vim.keymap.set("n", "<leader>gp", ":Git! push<CR><C-w>k")
+vim.keymap.set("n", "<leader>gp", ":Git push<CR><C-w>k")
 
 local function branch_name()
     local branch = vim.fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
