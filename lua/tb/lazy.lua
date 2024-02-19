@@ -47,6 +47,7 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" }
     },
     "folke/tokyonight.nvim",
+    "ayu-theme/ayu-vim",
     "tpope/vim-fugitive",
     "lewis6991/gitsigns.nvim",
     "karb94/neoscroll.nvim",
