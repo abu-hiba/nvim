@@ -46,6 +46,11 @@ require("lazy").setup({
         "nvim-lualine/lualine.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" }
     },
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true
+    },
     "folke/tokyonight.nvim",
     "ayu-theme/ayu-vim",
     "tpope/vim-fugitive",
