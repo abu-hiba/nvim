@@ -57,4 +57,5 @@ require("lazy").setup({
     "lewis6991/gitsigns.nvim",
     "karb94/neoscroll.nvim",
     "github/copilot.vim",
+    "tpope/vim-surround",
 })
