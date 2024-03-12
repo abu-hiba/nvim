@@ -36,3 +36,6 @@ vim.keymap.set("n", "<C-k>", ":resize +5<CR>")
 vim.keymap.set("n", "<C-j>", ":resize -5<CR>")
 vim.keymap.set("n", "<C-l>", ":vertical resize +5<CR>")
 vim.keymap.set("n", "<C-h>", ":vertical resize -5<CR>")
+
+-- Convenience
+vim.keymap.set("n", "<leader>;", "A;<Esc>")
