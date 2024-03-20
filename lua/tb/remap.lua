@@ -38,4 +38,4 @@ vim.keymap.set("n", "<C-l>", ":vertical resize +5<CR>")
 vim.keymap.set("n", "<C-h>", ":vertical resize -5<CR>")
 
 -- Convenience
-vim.keymap.set("n", "<leader>;", "A;<Esc>")
+vim.keymap.set("n", "<leader>;", "A;<Esc>") -- Add semicolon at end of line
