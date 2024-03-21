@@ -51,6 +51,12 @@ require("lazy").setup({
         event = "InsertEnter",
         config = true
     },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
+    },
     "folke/tokyonight.nvim",
     "ayu-theme/ayu-vim",
     "tpope/vim-fugitive",
