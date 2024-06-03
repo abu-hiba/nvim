@@ -57,6 +57,14 @@ require("lazy").setup({
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    },
     "folke/tokyonight.nvim",
     "ayu-theme/ayu-vim",
     "tpope/vim-fugitive",
@@ -64,4 +72,5 @@ require("lazy").setup({
     "karb94/neoscroll.nvim",
     "github/copilot.vim",
     "tpope/vim-surround",
+    "vim-test/vim-test",
 })
