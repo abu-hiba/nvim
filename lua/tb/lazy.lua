@@ -65,6 +65,7 @@ require("lazy").setup({
             "nvim-telescope/telescope.nvim"
         }
     },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     "folke/tokyonight.nvim",
     "ayu-theme/ayu-vim",
     "tpope/vim-fugitive",
