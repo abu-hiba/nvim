@@ -24,21 +24,6 @@ require("lazy").setup({
         build = ":TSUpdate"
     },
     {
-        "VonHeikemen/lsp-zero.nvim",
-        branch = "v3.x",
-        dependencies = {
-            -- LSP support
-            "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim",
-            "neovim/nvim-lspconfig",
-            -- Autocompletion
-            "hrsh7th/cmp-nvim-lsp",
-            "hrsh7th/nvim-cmp",
-            -- Snippets
-            "L3MON4D3/LuaSnip",
-        },
-    },
-    {
         "prichrd/netrw.nvim",
         dependencies = { "nvim-tree/nvim-web-devicons" }
     },
@@ -58,17 +43,13 @@ require("lazy").setup({
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    {
-        "ThePrimeagen/harpoon",
-        branch = "harpoon2",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-telescope/telescope.nvim"
-        }
-    },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    "folke/tokyonight.nvim",
-    "ayu-theme/ayu-vim",
+    {
+	"folke/tokyonight.nvim",
+        config = function()
+	    vim.cmd("colorscheme tokyonight-moon")
+	end
+    },
     "tpope/vim-fugitive",
     "lewis6991/gitsigns.nvim",
     "karb94/neoscroll.nvim",
