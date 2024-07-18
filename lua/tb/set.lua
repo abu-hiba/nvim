@@ -15,7 +15,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
-vim.cmd("colorscheme terafox")
+vim.cmd("colorscheme kanagawa")
 
 vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
