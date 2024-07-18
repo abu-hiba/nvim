@@ -1,9 +1,13 @@
-local function getCurrentDir()
+local function get_session_dir()
   local cwd = vim.fn.getcwd()
   local lastSlashIndex = string.find(cwd, "/[^/]*$")
   if lastSlashIndex == nil then lastSlashIndex = 1 end
-  return string.sub(cwd, lastSlashIndex, string.len(cwd))
+  local current_dir = string.sub(cwd, lastSlashIndex, string.len(cwd))
+  local session_dir = vim.fn.stdpath("config") .. "/session" .. current_dir
+  print(session_dir)
+  return session_dir
 end
+vim.api.nvim_create_user_command("SessionDir", get_session_dir, {})
 
 local function file_exists(path)
   local file = io.open(path, "r")
@@ -16,16 +20,14 @@ local function file_exists(path)
 end
 
 local function save_session()
-  local dir = getCurrentDir()
-  vim.cmd("!mkdir -p session" .. dir)
-  vim.cmd("mksession! session" .. dir .. "/session.vim")
+  vim.cmd("!mkdir -p " .. get_session_dir())
+  vim.cmd("mksession! " .. get_session_dir() .. "/session.vim")
 end
 
 local function restore_session()
-  local dir = getCurrentDir()
-  local session = "session" .. dir .. "/session.vim"
+  local session = get_session_dir() .. "/session.vim"
   if file_exists(session) then
-    vim.cmd("source session" .. dir .. "/session.vim")
+    vim.cmd("source " .. get_session_dir() .. "/session.vim")
   end
 end
 
