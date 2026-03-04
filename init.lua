@@ -49,11 +49,10 @@ cmp.setup({
   })
 })
 
--- CLANGD SETUP
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").clangd.setup({
--- vim.lsp.config().clangd.setup({
+vim.lsp.enable("clang")
+vim.lsp.config("clangd", {
   capabilities = capabilities,
   cmd = {
     "clangd",
