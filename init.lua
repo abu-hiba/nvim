@@ -28,6 +28,7 @@ require("lazy").setup({
   "saadparwaiz1/cmp_luasnip",        -- Snippets source for nvim-cmp
   "williamboman/mason.nvim",         -- Optional: Installer for LSPs
   "williamboman/mason-lspconfig.nvim",
+  "lewis6991/gitsigns.nvim",
 })
 
 -- Mason Setup
