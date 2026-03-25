@@ -7,6 +7,8 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.expandtab = true
 vim.o.cursorline = true
+vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 vim.cmd "colorscheme retrobox"
 
 -- Bootstrap lazy.nvim (Plugin Manager)
