@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.o.completeopt = "menu,menuone,noselect" -- Better completion experience
 vim.o.updatetime = 300                      -- Faster diagnostics
-vim.o.signcolumn = "yes"                    -- Always show error column
+vim.o.signcolumn = "yes"
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.expandtab = true
