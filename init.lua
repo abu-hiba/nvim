@@ -23,7 +23,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Set up Plugins
 require("lazy").setup({
-  "neovim/nvim-lspconfig",           -- LSP configurations
+  "neovim/nvim-lspconfig",
   "hrsh7th/nvim-cmp",                -- Autocompletion engine
   "hrsh7th/cmp-nvim-lsp",            -- LSP source for nvim-cmp
   "L3MON4D3/LuaSnip",                -- Snippets engine (required for cmp)
