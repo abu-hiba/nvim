@@ -63,7 +63,7 @@ vim.lsp.config("clangd", {
     "--clang-tidy",              -- Enable linter diagnostics
     "--header-insertion=iwyu",   -- "Include What You Use" (auto-imports)
     "--completion-style=detailed", -- detailed completion info
-    "--function-arg-placeholders", -- Fill function args with placeholders
+    "--function-arg-placeholders=1", -- Fill function args with placeholders
     "--fallback-style=llvm",     -- Format style if .clang-format is missing
   },
   init_options = {
